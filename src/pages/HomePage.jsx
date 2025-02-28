@@ -10,9 +10,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // import "swiper/css/navigation";
 import "swiper/css/scrollbar";
-import { Footer } from "../Component/Footer";
-import { Section5 } from "../Component/home/Section5";
 import { SekilasPerusahaan } from "../Component/home/SekilasPerusahaan";
+import { Section2 } from "../Component/home/Section2";
+import { TerhubungDenganKami } from "../Component/home/TerhubungDenganKami";
 
 // Data Gambar
 const dataGambar = [
@@ -61,13 +61,13 @@ export const HomePage = () => {
       </div>
 
       {/* section 2 */}
-      <div></div>
+      <Section2 />
 
       {/* Sekilas Perusahaan */}
       <SekilasPerusahaan />
 
       {/* Terhubung Dengan Team Kami */}
-      <div></div>
+      <TerhubungDenganKami />
     </div>
   );
 };

@@ -19,9 +19,9 @@ export const SekilasPerusahaan = () => {
     <div className="flex flex-col items-center my-10">
       {/* Judul dengan Efek Hover */}
       <div className="flex items-center justify-center gap-3">
-        <div className="w-16 h-1 bg-blue-950 rounded-full"></div>
-        <h1 className="text-4xl font-bold text-gray-900 relative transition-all duration-300 hover:text-yellow-600">Sekilas Perusahaan</h1>
-        <div className="w-16 h-1 bg-blue-950 rounded-full"></div>
+        <div className="w-16 h-1 bg-blue-900 rounded-full"></div>
+        <h1 className="text-4xl font-bold text-gray-900 ">Sekilas Perusahaan</h1>
+        <div className="w-16 h-1 bg-blue-900 rounded-full"></div>
       </div>
 
       {/* Pemutar Video YouTube dengan Shadow & Border */}

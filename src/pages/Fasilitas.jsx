@@ -1,10 +1,10 @@
 import React from "react";
-import { SekilasPerusahaan } from "../Component/home/SekilasPerusahaan";
+import { TerhubungDenganKami } from "../Component/home/TerhubungDenganKami";
 
 export const Fasilitas = () => {
   return (
     <div>
-      <SekilasPerusahaan />
+      <TerhubungDenganKami />
     </div>
   );
 };
