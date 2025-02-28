@@ -11,6 +11,7 @@ import { Produk3 } from "../pages/Produk/Produk3";
 import { Fasilitas } from "../pages/Fasilitas";
 import { Karir } from "../pages/Karir";
 import { News } from "../pages/News";
+import { Footer } from "../Component/Footer";
 
 export const Routerlist = () => {
   return (
@@ -39,6 +40,7 @@ export const Routerlist = () => {
         {/* News */}
         <Route path="/News" element={<News />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
