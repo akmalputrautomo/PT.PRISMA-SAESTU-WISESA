@@ -32,22 +32,22 @@ export const DataFalisitas = [
         image: ImageImport.Image2,
       },
       {
-        id: 4,
+        id: 5,
         title: "Bitument Terminal",
         image: ImageImport.Image2,
       },
       {
-        id: 5,
+        id: 6,
         title: "Bitument Terminal",
         image: ImageImport.Image3,
       },
       {
-        id: 6,
+        id: 7,
         title: "Bitument Terminal",
         image: ImageImport.Image1,
       },
       {
-        id: 6,
+        id: 8,
         title: "Bitument Terminal",
         image: ImageImport.Image1,
       },
@@ -58,12 +58,12 @@ export const DataFalisitas = [
     title: "Laboratorium",
     items: [
       {
-        id: 7,
+        id: 9,
         title: "Laboratorium",
         image: ImageImport.Image2,
       },
       {
-        id: 8,
+        id: 10,
         title: "Laboratorium",
         image: ImageImport.Image3,
       },
@@ -74,7 +74,7 @@ export const DataFalisitas = [
     title: "Transportasi",
     items: [
       {
-        id: 9,
+        id: 11,
         title: "Transportasi",
         image: ImageImport.Image3,
       },
@@ -85,7 +85,7 @@ export const DataFalisitas = [
     title: "Kantor Pusat",
     items: [
       {
-        id: 10,
+        id: 12,
         title: "Kantor Pusat",
         image: ImageImport.Image2,
       },
