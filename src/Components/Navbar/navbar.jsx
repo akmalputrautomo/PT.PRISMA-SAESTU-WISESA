@@ -58,7 +58,6 @@ const ListNavbar = [
     link: "/News",
   },
 ];
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -71,7 +70,7 @@ export default function Navbar() {
     }));
   };
   return (
-    <header className="w-full fixed top-0 z-10  font-semibold font-roboto  justify-center  py-6 flex bg-white shadow-md">
+    <header className="w-full fixed top-0 z-10  font-semibold font-roboto  justify-center  py-6 flex bg-transparent text-white">
       <section className="container w-full flex justify-between lg:mx-28 items-center max-sm:px-4">
         {/* Logo */}
         <Link to={"/"} className="sm:basis-1/5">
@@ -95,10 +94,10 @@ export default function Navbar() {
                       <ChevronDown size={16} />
                     )}
                   </div>
-                  <span className="w-full h-1 block transition-all duration-300 group-hover:opacity-100  group-hover:translate-0 opacity-0 -translate-x-100 bg-black "></span>
+                  <span className="w-full h-1 block transition-all duration-300 group-hover:opacity-100  group-hover:translate-0 opacity-0 -translate-x-100 bg-orange-500 rounded-2xl "></span>
                 </Link>
                 {item.hasOwnProperty("list_link") && (
-                  <ul className=" hidden group-hover:block  duration-300 transition-all  shadow-lg w-48 space-y-5 bg-white p-3 pb-0    absolute top-5 lg:top-6 ">
+                  <ul className=" hidden group-hover:block  duration-300 transition-all  shadow-lg w-48 space-y-5 bg-white p-3 pb-0    absolute top-5 lg:top-6  text-black">
                     {item.list_link.map((item, index) => (
                       <li key={index} className="">
                         <Link
