@@ -70,7 +70,7 @@ export default function Navbar() {
     }));
   };
   return (
-    <header className="w-full fixed top-0 z-10  font-semibold font-roboto  justify-center  py-6 flex bg-transparent text-white">
+    <header className="w-full fixed top-0 z-10  font-semibold font-roboto  justify-center  py-6 flex bg-white text-black shadow-md">
       <section className="container w-full flex justify-between lg:mx-28 items-center max-sm:px-4">
         {/* Logo */}
         <Link to={"/"} className="sm:basis-1/5">
