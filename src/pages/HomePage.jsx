@@ -10,9 +10,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // import "swiper/css/navigation";
 import "swiper/css/scrollbar";
-import { SekilasPerusahaan } from "../Component/home/SekilasPerusahaan";
-import { Section2 } from "../Component/home/Section2";
-import { TerhubungDenganKami } from "../Component/home/TerhubungDenganKami";
+import { SekilasPerusahaan } from "../Components/home/SekilasPerusahaan";
+import { Section2 } from "../Components/home/Section2";
+import { TerhubungDenganKami } from "../Components/home/TerhubungDenganKami";
 
 // Data Gambar
 const dataGambar = [

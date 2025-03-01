@@ -1,5 +1,5 @@
 import React from "react";
-import { TerhubungDenganKami } from "../Component/home/TerhubungDenganKami";
+import { TerhubungDenganKami } from "../Components/home/TerhubungDenganKami";
 
 export const Fasilitas = () => {
   return (

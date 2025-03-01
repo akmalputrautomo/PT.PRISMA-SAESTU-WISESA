@@ -12,7 +12,7 @@ import { Fasilitas } from "../pages/Fasilitas";
 import { Karir } from "../pages/Karir";
 import { News } from "../pages/News";
 import Navbar from "../Components/Navbar/navbar";
-import { Footer } from "../Component/Footer";
+import { Footer } from "../Components/Footer/Footer";
 
 export const Routerlist = () => {
   return (
