@@ -11,20 +11,31 @@ import { Produk3 } from "../pages/Produk/Produk3";
 import { Fasilitas } from "../pages/Fasilitas";
 import { Karir } from "../pages/Karir";
 import { News } from "../pages/News";
+import Navbar from "../Components/Navbar/navbar";
 import { Footer } from "../Component/Footer";
 
 export const Routerlist = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         {/* homepage */}
         <Route path="/" element={<HomePage />} />
 
         {/* Tentang Kami */}
-        <Route path="/TentangKami/SekilasPerusahaan" element={<SekilasPerusahaan />} />
+        <Route
+          path="/TentangKami/SekilasPerusahaan"
+          element={<SekilasPerusahaan />}
+        />
         <Route path="/TentangKami/VisiMisi" element={<VisiMisi />} />
-        <Route path="/TentangKami/BoardOfDirector" element={<BoardOfDicertor />} />
-        <Route path="/TentangKami/MengapaMemilihKami" element={<MengapaMemilihKami />} />
+        <Route
+          path="/TentangKami/BoardOfDirector"
+          element={<BoardOfDicertor />}
+        />
+        <Route
+          path="/TentangKami/MengapaMemilihKami"
+          element={<MengapaMemilihKami />}
+        />
 
         {/* Produk */}
         <Route path="/Produk/Produk1" element={<Produk1 />} />
