@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
-import { HomePage } from "../pages/HomePage";
-import { SekilasPerusahaan } from "../pages/TentangKami/SekilasPerusahaan";
-import { VisiMisi } from "../pages/TentangKami/VisiMisi";
-import { BoardOfDicertor } from "../pages/TentangKami/BoardOfDicertor";
-import { MengapaMemilihKami } from "../pages/TentangKami/MengapaMemilihKami";
-import { Produk1 } from "../pages/Produk/Produk1";
-import { Produk2 } from "../pages/Produk/Produk2";
-import { Produk3 } from "../pages/Produk/Produk3";
-import { Fasilitas } from "../pages/Fasilitas";
-import { Karir } from "../pages/Karir";
-import { News } from "../pages/News";
-import Navbar from "../Components/Navbar/navbar";
-import { Footer } from "../Components/Footer/Footer";
+import { HomePage } from "@/pages/HomePage";
+import { SekilasPerusahaan } from "@/pages/TentangKami/SekilasPerusahaan";
+import { VisiMisi } from "@/pages/TentangKami/VisiMisi";
+import { BoardOfDicertor } from "@/pages/TentangKami/BoardOfDicertor";
+import { MengapaMemilihKami } from "@/pages/TentangKami/MengapaMemilihKami";
+
+import { Fasilitas } from "@/pages/Fasilitas";
+import { Karir } from "@/pages/Karir";
+import { News } from "@/pages/News";
+import Navbar from "@/Components/navbar";
+import { Footer } from "@/Components/Footer";
+import ProdukDetail from "@/pages/Produk/ProdukDetail";
+import { Produk } from "@/pages/Produk/Produk";
 
 export const Routerlist = () => {
   return (
@@ -38,9 +38,8 @@ export const Routerlist = () => {
         />
 
         {/* Produk */}
-        <Route path="/Produk/Produk1" element={<Produk1 />} />
-        <Route path="/Produk/Produk2" element={<Produk2 />} />
-        <Route path="/Produk/Produk3" element={<Produk3 />} />
+        <Route path="/produk" element={<Produk />} />
+        <Route path="/produk/:id" element={<ProdukDetail />} />
 
         {/* Fasilitas */}
         <Route path="/Fasilitas" element={<Fasilitas />} />
