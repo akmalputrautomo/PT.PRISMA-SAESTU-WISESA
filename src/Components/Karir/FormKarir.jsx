@@ -1,18 +1,53 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
+import { uploadPdf } from "../../utils/UploadPdf";
+import { toast } from "react-toastify";
 export default function FormKarir() {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  const onSubmit = async (data) => {
+    const file = await data.lamaran[0];
+    if (file) {
+      try {
+        const response = await uploadPdf(file);
+
+        const emailData = {
+          from_name: data.nama,
+          from_email: data.email,
+          message: `Nama: ${data.nama}\nEmail: ${data.email}\nNo. Telepon: ${data.notelp}\nAlamat: ${data.alamat}`,
+          from_file: response.secure_url,
+        };
+        emailjs
+          .send(
+            import.meta.env.VITE_SERVICE_ID,
+            import.meta.env.VITE_TEMPLATE_ID,
+            emailData,
+            import.meta.env.VITE_PUBLIC_KEY
+          )
+          .then(() => {
+            reset();
+            toast.success("Email berhasil dikirim!");
+          })
+          .catch((error) => {
+            reset();
+            toast.error("Gagal mengirim email");
+          });
+      } catch (error) {
+        toast.error("Gagal mengirim email");
+      }
+    }
+  };
 
   return (
     <form
       action=""
+      encType="multipart/form-data"
       onSubmit={handleSubmit(onSubmit)}
       className="w-full space-y-2 mt-4"
     >
@@ -69,7 +104,7 @@ export default function FormKarir() {
           {...register("notelp", {
             required: { value: true, message: "Masukan no telepon" },
           })}
-          type="text"
+          type="number"
           id="notelp"
           placeholder="Masukan Nomor Telepon"
           className={`border rounded py-1 px-2  w-full max-md:text-sm ${
@@ -109,8 +144,18 @@ export default function FormKarir() {
         <input
           {...register("lamaran", {
             required: { value: true, message: "Masukan lamaran anda" },
+
+            validate: {
+              checkAvailability: async (fileList) => {
+                const validateFiles = ["pdf", "docx"];
+                const fileExtension = fileList[0].name.split(".").pop();
+                if (!validateFiles.includes(fileExtension))
+                  return "Invalid file type (pdf, docx)";
+                if (fileList[0].size >= 5000000) return "File too large";
+              },
+            },
           })}
-          class={`block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 max-md:text-xs
+          className={`block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 max-md:text-xs
             ${
               errors.lamaran
                 ? "border-red-500 ring-offset-amber-500 outline-red-500"

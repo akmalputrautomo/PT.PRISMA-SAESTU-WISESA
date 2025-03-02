@@ -4,6 +4,7 @@ import HeaderKarir from "@/Components/Karir/Header";
 import FormKarir from "@/Components/Karir/FormKarir";
 import { Data_Karir } from "@/utils/Data/Data_Karir";
 import { useParams } from "react-router";
+import { ToastContainer } from "react-toastify";
 
 export const KarirDetail = () => {
   const { id } = useParams();
@@ -36,6 +37,7 @@ export const KarirDetail = () => {
           </div>
         </article>
       </article>
+      <ToastContainer position="top-right" autoClose={5000} />
     </main>
   );
 };
