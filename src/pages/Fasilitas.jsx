@@ -25,42 +25,24 @@ export const Fasilitas = () => {
           <header className="w-full py-5">
             <ul className="flex justify-center max-md:flex-wrap gap-5 items-center">
               <li>
-                <p
-                  className="hover:text-yellow-500 text-sm md:text-lg duration-300 font-sans hover:cursor-pointer font-medium"
-                  role="button"
-                  onClick={() => setActive("All")}
-                >
+                <p className="hover:text-yellow-500 text-sm md:text-lg duration-300 font-sans hover:cursor-pointer font-medium" role="button" onClick={() => setActive("All")}>
                   All
                 </p>
               </li>
               {Data.map((item) => (
                 <li key={item.id}>
-                  <p
-                    className="hover:text-yellow-500 text-sm md:text-lg duration-300 font-sans hover:cursor-pointer font-medium"
-                    role="button"
-                    onClick={() => setActive(item.title)}
-                  >
+                  <p className="hover:text-yellow-500 text-sm md:text-lg duration-300 font-sans hover:cursor-pointer font-medium" role="button" onClick={() => setActive(item.title)}>
                     {item.title}
                   </p>
                 </li>
               ))}
             </ul>
           </header>
-          <ListImage
-            WrappingData={WrappingData}
-            selectedIdSet={selectedIdSet}
-            DataFalisitas={DataFalisitas}
-            selectedId={selectedId}
-            active={active}
-          />
+          <ListImage WrappingData={WrappingData} selectedIdSet={selectedIdSet} DataFalisitas={DataFalisitas} selectedId={selectedId} active={active} />
         </article>
       </article>
       {/* Tampil Detail Image Fasilitas */}
-      <DetailImage
-        selectedId={selectedId}
-        selectedIdSet={selectedIdSet}
-        combinedData={combinedData}
-      />
+      <DetailImage selectedId={selectedId} selectedIdSet={selectedIdSet} combinedData={combinedData} />
     </main>
   );
 };

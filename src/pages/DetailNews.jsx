@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import FrameBorder from "../Components/Frame_border";
 
 export const DetailNews = () => {
   const { id } = useParams();
@@ -8,7 +9,7 @@ export const DetailNews = () => {
       id: 1,
       title: "Sirkuit Mandalika Menggunakan Aspal Modifikasi Shell Cariphalte Racetrack",
       date: "Senin, 20 November 2023",
-      image: "https://via.placeholder.com/600",
+      image: "https://cdn.medcom.id/dynamic/content/2018/05/14/874136/tsQLu9A7aB.jpg?w=1024",
       content: `Sirkuit Mandalika yang terletak di Kabupaten Lombok, Provinsi Nusa Tenggara Barat (NTB) dengan nama
       resmi Pertamina Mandalika International Street Circuit diresmikan oleh Presiden Jokowi pada tanggal 21 November 2021.
       
@@ -41,8 +42,9 @@ export const DetailNews = () => {
 
   return (
     <div className="container mx-auto py-12 px-4">
-      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-        <h1 className="text-black flex justify-center items-center font-bold">NEWS</h1>
+      <FrameBorder title="DetailNews" link="DetailNews" />
+      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden pt-12">
+        {/* <h1 className="text-black flex justify-center items-center font-bold">NEWS</h1> */}
         <img src={selectedNews.image} alt={selectedNews.title} className="w-full h-64 object-cover" />
         <div className="p-6">
           <span className="bg-yellow-500 text-white text-sm px-3 py-1 rounded-md">{selectedNews.date}</span>
