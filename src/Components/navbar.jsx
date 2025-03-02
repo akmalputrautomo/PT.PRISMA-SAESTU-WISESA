@@ -51,11 +51,11 @@ const ListNavbar = [
   },
   {
     name: "Fasilitas",
-    link: "/Fasilitas",
+    link: "/fasilitas",
   },
   {
     name: "Karir",
-    link: "/Karir",
+    link: "/karir",
   },
   {
     name: "News",
