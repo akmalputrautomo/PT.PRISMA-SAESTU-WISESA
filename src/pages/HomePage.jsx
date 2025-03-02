@@ -41,21 +41,12 @@ export const HomePage = () => {
     <div className="overflow-x-hidden">
       {/* section 1 */}
       <div className="bg-black w-screen h-screen">
-        <Swiper
-          autoplay={{ delay: 10000, disableOnInteraction: false }}
-          navigation
-          modules={[Navigation, Autoplay]}
-          className="mySwiper"
-        >
+        <Swiper autoplay={{ delay: 10000, disableOnInteraction: false }} navigation modules={[Navigation, Autoplay]} className="mySwiper">
           {dataGambar.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="relative w-full h-screen">
                 {/* Gambar */}
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-full object-cover opacity-50"
-                />
+                <img src={item.src} alt={item.alt} className="w-full h-full object-cover opacity-50" />
               </div>
             </SwiperSlide>
           ))}
