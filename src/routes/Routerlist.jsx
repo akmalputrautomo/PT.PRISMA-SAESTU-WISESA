@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
+import { DetailNews } from "@/pages/DetailNews";
 import { HomePage } from "@/pages/HomePage";
 import { SekilasPerusahaan } from "@/pages/TentangKami/SekilasPerusahaan";
 import { VisiMisi } from "@/pages/TentangKami/VisiMisi";
 import { BoardOfDicertor } from "@/pages/TentangKami/BoardOfDicertor";
 import { MengapaMemilihKami } from "@/pages/TentangKami/MengapaMemilihKami";
-
 import { Fasilitas } from "@/pages/Fasilitas";
 import { Karir } from "@/pages/Karir";
 import { News } from "@/pages/News";
@@ -23,19 +23,10 @@ export const Routerlist = () => {
         <Route path="/" element={<HomePage />} />
 
         {/* Tentang Kami */}
-        <Route
-          path="/TentangKami/SekilasPerusahaan"
-          element={<SekilasPerusahaan />}
-        />
+        <Route path="/TentangKami/SekilasPerusahaan" element={<SekilasPerusahaan />} />
         <Route path="/TentangKami/VisiMisi" element={<VisiMisi />} />
-        <Route
-          path="/TentangKami/BoardOfDirector"
-          element={<BoardOfDicertor />}
-        />
-        <Route
-          path="/TentangKami/MengapaMemilihKami"
-          element={<MengapaMemilihKami />}
-        />
+        <Route path="/TentangKami/BoardOfDirector" element={<BoardOfDicertor />} />
+        <Route path="/TentangKami/MengapaMemilihKami" element={<MengapaMemilihKami />} />
 
         {/* Produk */}
         <Route path="/produk" element={<Produk />} />
@@ -49,6 +40,7 @@ export const Routerlist = () => {
 
         {/* News */}
         <Route path="/News" element={<News />} />
+        <Route path="/DetailNews/:id" element={<DetailNews />} />
       </Routes>
       <Footer />
     </BrowserRouter>
