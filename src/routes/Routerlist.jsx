@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 import { DetailNews } from "@/pages/DetailNews";
 import { HomePage } from "@/pages/HomePage";
-import { SekilasPerusahaan } from "@/pages/TentangKami/SekilasPerusahaan";
 import { VisiMisi } from "@/pages/TentangKami/VisiMisi";
 import { BoardOfDicertor } from "@/pages/TentangKami/BoardOfDicertor";
 import { MengapaMemilihKami } from "@/pages/TentangKami/MengapaMemilihKami";
@@ -14,6 +13,7 @@ import ProdukDetail from "@/pages/Produk/ProdukDetail";
 import { Produk } from "@/pages/Produk/Produk";
 import { Karir } from "@/pages/Karir/Karir";
 import { KarirDetail } from "@/pages/Karir/KarirDetail";
+import { Sekilas } from "@/pages/TentangKami/Sekilas";
 
 export const Routerlist = () => {
   return (
@@ -24,9 +24,9 @@ export const Routerlist = () => {
         <Route path="/" element={<HomePage />} />
 
         {/* Tentang Kami */}
-        <Route path="/TentangKami/SekilasPerusahaan" element={<SekilasPerusahaan />} />
+        <Route path="/TentangKami/Sekilas" element={<Sekilas />} />
         <Route path="/TentangKami/VisiMisi" element={<VisiMisi />} />
-        <Route path="/TentangKami/BoardOfDirector" element={<BoardOfDicertor />} />
+        <Route path="/TentangKami/BoardOfDicertor" element={<BoardOfDicertor />} />
         <Route path="/TentangKami/MengapaMemilihKami" element={<MengapaMemilihKami />} />
 
         {/* Produk */}
