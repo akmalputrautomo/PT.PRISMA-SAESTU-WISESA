@@ -2,7 +2,7 @@ import React from "react";
 import { ImageImport } from "@/utils/ImageImport";
 import { Link } from "react-router";
 
-export default function FrameBorder({ title = "", link = "" }) {
+export default function FrameBorder({ title = "", link = "", params = "" }) {
   return (
     <header className="w-full h-72 relative">
       <figure className="w-full h-full   relative">
@@ -11,7 +11,10 @@ export default function FrameBorder({ title = "", link = "" }) {
             {title}
           </h1>
           <section className="flex items-center gap-2 text-lg font-sans">
-            <Link to="/" className="text-white hover:underline text-sm sm:text-lg font-sans">
+            <Link
+              to="/"
+              className="text-white hover:underline text-sm sm:text-lg font-sans"
+            >
               home
             </Link>
             <span className="text-white text-sm sm:text-lg font-sans">/</span>
@@ -21,9 +24,26 @@ export default function FrameBorder({ title = "", link = "" }) {
             >
               {link}
             </Link>
+            {params && (
+              <>
+                <span className="text-white text-sm sm:text-lg font-sans">
+                  /
+                </span>
+                <Link
+                  to={`/${link}/${params}`}
+                  className="text-yellow-300 hover:underline text-sm sm:text-lg font-sans"
+                >
+                  {params}
+                </Link>
+              </>
+            )}
           </section>
         </figcaption>
-        <img src={ImageImport.FrameBorderPrisma} alt="frame border" className="w-full h-full object-none " />
+        <img
+          src={ImageImport.FrameBorderPrisma}
+          alt="frame border"
+          className="w-full h-full object-none "
+        />
       </figure>
     </header>
   );
