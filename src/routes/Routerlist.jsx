@@ -7,12 +7,13 @@ import { VisiMisi } from "@/pages/TentangKami/VisiMisi";
 import { BoardOfDicertor } from "@/pages/TentangKami/BoardOfDicertor";
 import { MengapaMemilihKami } from "@/pages/TentangKami/MengapaMemilihKami";
 import { Fasilitas } from "@/pages/Fasilitas";
-import { Karir } from "@/pages/Karir";
 import { News } from "@/pages/News";
 import Navbar from "@/Components/navbar";
 import { Footer } from "@/Components/Footer";
 import ProdukDetail from "@/pages/Produk/ProdukDetail";
 import { Produk } from "@/pages/Produk/Produk";
+import { Karir } from "@/pages/Karir/Karir";
+import { KarirDetail } from "@/pages/Karir/KarirDetail";
 
 export const Routerlist = () => {
   return (
@@ -33,10 +34,12 @@ export const Routerlist = () => {
         <Route path="/produk/:id" element={<ProdukDetail />} />
 
         {/* Fasilitas */}
-        <Route path="/Fasilitas" element={<Fasilitas />} />
+        <Route path="/fasilitas" element={<Fasilitas />} />
 
         {/* Karir */}
-        <Route path="/Karir" element={<Karir />} />
+        <Route path="/karir" element={<Karir />} />
+
+        <Route path="/karir/:id" element={<KarirDetail />} />
 
         {/* News */}
         <Route path="/News" element={<News />} />
