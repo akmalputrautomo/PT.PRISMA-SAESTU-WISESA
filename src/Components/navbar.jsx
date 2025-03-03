@@ -141,7 +141,7 @@ export default function Navbar() {
         {/* Button Toggle Navbar Mobile */}
         <section className="flex items-center rounded-full shadow-md  md:hidden">
           <button
-            className="hover:bg-gray-200 p-2 rounded-full hover:cursor-pointer"
+            className="hover:bg-gray-200 p-2  rounded-full hover:cursor-pointer"
             onClick={() => setIsOpen(true)}
           >
             <Menu />
@@ -199,6 +199,7 @@ export default function Navbar() {
                             <Link
                               to={item.link}
                               className="block text-black hover:text-blue-400 duration-300 "
+                              onClick={() => setIsOpen(false)}
                             >
                               {item.name}
                             </Link>
@@ -211,6 +212,7 @@ export default function Navbar() {
                   <Link
                     to={item.link}
                     className="flex justify-between items-center"
+                    onClick={() => setIsOpen(false)}
                   >
                     {item.name}{" "}
                   </Link>
