@@ -24,10 +24,19 @@ export const Routerlist = () => {
         <Route path="/" element={<HomePage />} />
 
         {/* Tentang Kami */}
-        <Route path="/TentangKami/SekilasPerusahaan" element={<SekilasPerusahaan />} />
+        <Route
+          path="/TentangKami/SekilasPerusahaan"
+          element={<SekilasPerusahaan />}
+        />
         <Route path="/TentangKami/VisiMisi" element={<VisiMisi />} />
-        <Route path="/TentangKami/BoardOfDirector" element={<BoardOfDicertor />} />
-        <Route path="/TentangKami/MengapaMemilihKami" element={<MengapaMemilihKami />} />
+        <Route
+          path="/TentangKami/BoardOfDirector"
+          element={<BoardOfDicertor />}
+        />
+        <Route
+          path="/TentangKami/MengapaMemilihKami"
+          element={<MengapaMemilihKami />}
+        />
 
         {/* Produk */}
         <Route path="/produk" element={<Produk />} />

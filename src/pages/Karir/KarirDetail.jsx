@@ -32,7 +32,7 @@ export const KarirDetail = () => {
                 </h1>
                 <h3 className=" ">Lengkapi form dibawah ini.</h3>
               </header>
-              <FormKarir />
+              <FormKarir title={data.title} />
             </section>
           </div>
         </article>

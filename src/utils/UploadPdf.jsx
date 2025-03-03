@@ -12,7 +12,6 @@ export async function uploadPdf(file) {
     const response = await instance.post(`/raw/upload`, formData);
     return response.data;
   } catch (error) {
-    console.error("Upload ke Cloudinary gagal", error);
     return error;
   }
 }

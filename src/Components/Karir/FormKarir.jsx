@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
 import { uploadPdf } from "../../utils/UploadPdf";
 import { toast } from "react-toastify";
-export default function FormKarir() {
+export default function FormKarir({ title = "" }) {
   const {
     register,
     reset,
@@ -18,6 +18,7 @@ export default function FormKarir() {
         const response = await uploadPdf(file);
 
         const emailData = {
+          from_title: title,
           from_name: data.nama,
           from_email: data.email,
           message: `Nama: ${data.nama}\nEmail: ${data.email}\nNo. Telepon: ${data.notelp}\nAlamat: ${data.alamat}`,

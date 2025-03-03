@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { ImageImport } from "@/utils/ImageImport";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { DataProduk } from "@/utils/Data/Data_Produk";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 const ListNavbar = [
   {
     name: "Home",
@@ -9,6 +11,7 @@ const ListNavbar = [
   },
   {
     name: "Tentang Kami",
+    link: "/TentangKami",
     list_link: [
       {
         name: "Sekilas Perusahaan",
@@ -30,24 +33,11 @@ const ListNavbar = [
   },
   {
     name: "Produk",
-    list_link: [
-      {
-        name: "All Produk",
-        link: "/produk",
-      },
-      {
-        name: "Produk 1",
-        link: "/produk/1",
-      },
-      {
-        name: "Produk 2",
-        link: "/produk/3",
-      },
-      {
-        name: "Produk 3",
-        link: "/produk/4",
-      },
-    ],
+    link: "/produk",
+    list_link: DataProduk.map((item) => ({
+      name: item.title,
+      link: `/Produk${item.id ? `/${item.id}` : ""}`,
+    })),
   },
   {
     name: "Fasilitas",
@@ -64,7 +54,15 @@ const ListNavbar = [
 ];
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = useLocation().pathname;
+  const splitPathname = pathname.split("/")[1].toLowerCase();
 
+  const [transparant, transparantSet] = useState(false);
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 0) transparantSet(true);
+    else transparantSet(false);
+  });
   // Toggle List Mobile
   const [openListNavbarMobile, setOpenListNavbarMobile] = useState({});
   const toggleMenu = (index) => {
@@ -74,7 +72,15 @@ export default function Navbar() {
     }));
   };
   return (
-    <header className="w-full fixed top-0 z-10  font-semibold font-roboto  justify-center  py-5 flex bg-white text-black shadow-md">
+    <motion.header
+      animate={
+        transparant
+          ? { backgroundColor: "#ffffff" }
+          : { backgroundColor: "rgba(0,0,0,0)", boxShadow: "none" }
+      }
+      transition={{ duration: 0.1, ease: "easeInOut" }}
+      className="w-full fixed top-0 z-20  font-semibold font-roboto  justify-center  py-5 flex bg-white text-black shadow-md"
+    >
       <section className="container w-full flex justify-between lg:mx-28 items-center max-sm:px-4">
         {/* Logo */}
         <Link to={"/"} className="sm:basis-1/5">
@@ -92,13 +98,26 @@ export default function Navbar() {
                   to={item.link}
                   className="uppercase block overflow-hidden"
                 >
-                  <div className="flex text-xs lg:text-sm  items-center gap-0.5">
+                  <motion.div
+                    animate={
+                      transparant ? { color: "#000000" } : { color: "#ffffff" }
+                    }
+                    transition={{ duration: 0.1, ease: "easeInOut" }}
+                    className="flex text-xs lg:text-sm  items-center gap-0.5 "
+                  >
                     {item.name}{" "}
                     {item.hasOwnProperty("list_link") && (
                       <ChevronDown size={16} />
                     )}
-                  </div>
-                  <span className="w-full group-hover:h-1 block transition-all duration-300 group-hover:opacity-100  group-hover:translate-0 opacity-0 -translate-x-100 bg-orange-500 rounded-2xl "></span>
+                  </motion.div>
+                  <span
+                    className={`w-full group-hover:h-1 block transition-all duration-300 group-hover:opacity-100  group-hover:translate-0 ${
+                      item.link === pathname ||
+                      item.link.split("/")[1].toLowerCase() === splitPathname
+                        ? "opacity-100 translate-0 h-1"
+                        : "opacity-0 -translate-x-full h-0"
+                    }    bg-orange-500 rounded-2xl `}
+                  ></span>
                 </Link>
                 {item.hasOwnProperty("list_link") && (
                   <ul className=" hidden group-hover:block  duration-300 transition-all  shadow-lg w-48 space-y-5 bg-white p-3 pb-0    absolute top-5 lg:top-6  text-black">
@@ -201,6 +220,6 @@ export default function Navbar() {
           </ul>
         </nav>
       </section>
-    </header>
+    </motion.header>
   );
 }
