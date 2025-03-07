@@ -2,7 +2,7 @@ import React from "react";
 import YouTube from "react-youtube";
 
 export const SekilasPerusahaan = () => {
-  const videoId = "TNqOJmpHZfs"; // ID video YouTube
+  const videoId = ""; // ID video YouTube
 
   const opts = {
     playerVars: {
@@ -17,9 +17,9 @@ export const SekilasPerusahaan = () => {
     <div className="flex flex-col items-center my-10 px-4">
       {/* Judul dengan Efek Hover */}
       <div className="flex items-center justify-center gap-3">
-        <div className="w-12 sm:w-16 h-1 bg-blue-900 rounded-full"></div>
+        <div className="w-12 sm:w-16 h-1 bg-yellow-500 rounded-full"></div>
         <h1 className="text-2xl sm:text-4xl font-bold text-gray-900">Sekilas Perusahaan</h1>
-        <div className="w-12 sm:w-16 h-1 bg-blue-900 rounded-full"></div>
+        <div className="w-12 sm:w-16 h-1 bg-yellow-500 rounded-full"></div>
       </div>
 
       {/* Pemutar Video YouTube Responsif */}
