@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DetailNews } from "@/pages/DetailNews";
 import { HomePage } from "@/pages/HomePage";
 import { VisiMisi } from "@/pages/TentangKami/VisiMisi";
@@ -14,6 +14,7 @@ import { Produk } from "@/pages/Produk/Produk";
 import { Karir } from "@/pages/Karir/Karir";
 import { KarirDetail } from "@/pages/Karir/KarirDetail";
 import { Sekilas } from "@/pages/TentangKami/Sekilas";
+import { Halamantidaktersedia } from "@/pages/Halamantidaktersedia"; // Tambahkan ini
 
 export const Routerlist = () => {
   return (
@@ -38,12 +39,14 @@ export const Routerlist = () => {
 
         {/* Karir */}
         <Route path="/karir" element={<Karir />} />
-
         <Route path="/karir/:id" element={<KarirDetail />} />
 
         {/* News */}
         <Route path="/News" element={<News />} />
         <Route path="/DetailNews/:id" element={<DetailNews />} />
+
+        {/* Halaman 404 */}
+        <Route path="*" element={<Halamantidaktersedia />} />
       </Routes>
       <Footer />
     </BrowserRouter>
