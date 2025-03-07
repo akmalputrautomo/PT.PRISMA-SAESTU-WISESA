@@ -41,7 +41,7 @@ export const DetailNews = () => {
   }
 
   return (
-    <div className="container mx-auto py-12 px-4">
+    <div className=" mx-auto  ">
       <FrameBorder title="DetailNews" link="DetailNews" />
       <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden pt-12">
         {/* <h1 className="text-black flex justify-center items-center font-bold">NEWS</h1> */}

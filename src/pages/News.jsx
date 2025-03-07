@@ -29,7 +29,7 @@ export const News = () => {
   return (
     <div className=" w-full">
       <FrameBorder title="News" link="News" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-20 ">
         {newsList.map((news) => (
           <div key={news.id} className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-transform transform hover:scale-105" onClick={() => navigate(`/DetailNews/${news.id}`)}>
             <img src={news.image} alt={`Thumbnail ${news.title}`} className="w-full h-48 object-cover" />

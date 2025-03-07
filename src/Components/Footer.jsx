@@ -4,68 +4,44 @@ import { ImageImport } from "../utils/ImageImport";
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white border-t relative border-gray-700 mt-4">
+    <footer className="w-full bg-[#00e5ff] text-white border-t relative border-gray-700 mt-4">
       {/* Bagian Informasi */}
       <figure className="w-full h-72 relative">
-        <img
-          src={ImageImport.FrameBorderPrisma}
-          alt="pt-prisma"
-          className="max-md:object-none object-cover h-full w-full  "
-        />
+        {/* <img src={ImageImport.FrameBorderPrisma} alt="pt-prisma" className="max-md:object-none object-cover h-full w-full  " /> */}
         <section className="w-full z-10 bg-black/50 absolute top-0">
           <div className="container mx-auto flex flex-wrap justify-between p-2 md:p-10 gap-6">
             {/* Head Office */}
             <div className="w-full md:w-1/4">
               <h1 className="md:text-lg font-bold mb-2">HEAD OFFICE</h1>
-              <p className=" max-md:text-sm text-gray-300">
-                Jl. Grenjeng, No.03, Karanglo, Babadan RT.03 RW.01
-              </p>
-              <p className="max-md:text-sm text-gray-300">
-                Purwomartani, Kalasan, Sleman
-              </p>
-              <p className="max-md:text-sm text-gray-300">
-                Daerah Istimewa Yogyakarta 55571
-              </p>
+              <p className=" max-md:text-sm text-gray-300">Jl. Grenjeng, No.03, Karanglo, Babadan RT.03 RW.01</p>
+              <p className="max-md:text-sm text-gray-300">Purwomartani, Kalasan, Sleman</p>
+              <p className="max-md:text-sm text-gray-300">Daerah Istimewa Yogyakarta 55571</p>
             </div>
 
             {/* Kontak */}
             <div className="w-full md:w-1/4">
               <h1 className="md:text-lg font-bold mb-2">HUBUNGI</h1>
               <p className="max-md:text-sm text-gray-300">Telp: 0274-2853379</p>
-              <p className="max-md:text-sm text-gray-300">
-                Email: prismasaestuwisesa@gmail.com
-              </p>
+              <p className="max-md:text-sm text-gray-300">Email: prismasaestuwisesa@gmail.com</p>
             </div>
 
             {/* Bidang Usaha */}
             <div className="w-full md:w-1/4">
               <h1 className="md:text-lg font-bold mb-2">BIDANG USAHA</h1>
-              <p className="max-md:text-sm text-gray-300">
-                Perdagangan Alat Telekomunikasi, Komputer, Elektronik,
-                Percetakan, dan Penerbitan.
-              </p>
+              <p className="max-md:text-sm text-gray-300">Perdagangan Alat Telekomunikasi, Komputer, Elektronik, Percetakan, dan Penerbitan.</p>
             </div>
 
             {/* Follow Us */}
             <div className="w-full md:w-1/4">
               <h1 className="md:text-lg font-bold mb-2">FOLLOW US</h1>
               <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-blue-500 transition-all duration-300"
-                >
+                <a href="#" className="text-gray-400 hover:text-blue-500 transition-all duration-300">
                   <FaFacebook className="text-lg md:text-2xl" />
                 </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-pink-500 transition-all duration-300"
-                >
+                <a href="#" className="text-gray-400 hover:text-pink-500 transition-all duration-300">
                   <FaInstagram className="text-lg md:text-2xl" />
                 </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-blue-400 transition-all duration-300"
-                >
+                <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300">
                   <FaTwitter className="text-lg md:text-2xl" />
                 </a>
               </div>

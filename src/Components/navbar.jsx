@@ -91,10 +91,10 @@ export default function Navbar() {
                   <div className="flex text-xs lg:text-sm  items-center gap-0.5">
                     {item.name} {item.hasOwnProperty("list_link") && <ChevronDown size={16} />}
                   </div>
-                  <span className="w-full group-hover:h-1 block transition-all duration-300 group-hover:opacity-100  group-hover:translate-0 opacity-0 -translate-x-100 bg-orange-500 rounded-2xl "></span>
+                  <span className="w-full group-hover:h-1 block transition-all duration-300 group-hover:opacity-100  group-hover:translate-0 opacity-0 -translate-x-100 bg-orange-500  rounded-2xl "></span>
                 </Link>
                 {item.hasOwnProperty("list_link") && (
-                  <ul className=" hidden group-hover:block  duration-300 transition-all  shadow-lg w-48 space-y-5 bg-white p-3 pb-0    absolute top-5 lg:top-6  text-black">
+                  <ul className=" hidden group-hover:block  duration-300 transition-all  shadow-lg w-48 space-y-5 bg-white p-3 pb-0    absolute top-5 lg:top-6  text-black ">
                     {item.list_link.map((item, index) => (
                       <li key={index} className="">
                         <Link to={item.link} className="max-lg:text-sm w-full hover:text-blue-500 duration-300  font-medium">
@@ -142,7 +142,7 @@ export default function Navbar() {
                       <ul className="space-y-3 pl-2">
                         {item.list_link.map((item, index) => (
                           <li key={index}>
-                            <Link to={item.link} className="block text-black hover:text-blue-400 duration-300 ">
+                            <Link to={item.link} className="block  text-black hover:text-blue-400 duration-300 ">
                               {item.name}
                             </Link>
                           </li>
