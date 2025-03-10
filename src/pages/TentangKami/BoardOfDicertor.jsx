@@ -12,7 +12,7 @@ const directors = [
 
 export const BoardOfDicertor = () => {
   return (
-    <div className="w-full mx-auto py-16 text-center">
+    <div className="w-full mx-auto text-center">
       {/* Frame Border */}
       <FrameBorder title="Visi & Misi" link="BoardOfDicertor" />
 
