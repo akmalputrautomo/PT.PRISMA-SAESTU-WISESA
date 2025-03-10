@@ -14,7 +14,7 @@ import { SekilasPerusahaan } from "../Components/home/SekilasPerusahaan";
 import { Section2 } from "../Components/home/Section2";
 import { TerhubungDenganKami } from "../Components/home/TerhubungDenganKami";
 import { ImageImport } from "../utils/ImageImport";
-import { Coba } from "../Components/home/coba";
+import { Coba } from "../Components/home/Coba";
 
 // Data Gambar
 const dataGambar = [
