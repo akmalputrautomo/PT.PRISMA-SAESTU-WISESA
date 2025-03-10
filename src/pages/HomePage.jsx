@@ -14,7 +14,7 @@ import { SekilasPerusahaan } from "../Components/home/SekilasPerusahaan";
 import { Section2 } from "../Components/home/Section2";
 import { TerhubungDenganKami } from "../Components/home/TerhubungDenganKami";
 import { ImageImport } from "../utils/ImageImport";
-import { Coba } from "../Components/home/Coba";
+import { Section3 } from "../Components/home/Section3";
 
 // Data Gambar
 const dataGambar = [
@@ -66,8 +66,7 @@ export const HomePage = () => {
       <Section2 />
 
       {/* Sekilas Perusahaan */}
-      {/* <SekilasPerusahaan /> */}
-      <Coba />
+      <Section3 />
 
       {/* Terhubung Dengan Team Kami */}
       <TerhubungDenganKami />
