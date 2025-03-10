@@ -48,7 +48,7 @@ export const Routerlist = () => {
 
         {/* Halaman 404 */}
         <Route path="*" element={<Halamantidaktersedia />} />
-        <Route path="/coba" element={<Coba />} />
+        {/* <Route path="/coba" element={<Coba />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>
