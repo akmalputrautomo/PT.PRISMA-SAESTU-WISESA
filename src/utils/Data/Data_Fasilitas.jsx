@@ -1,4 +1,5 @@
 import { ImageImport } from "../ImageImport";
+import { VideoImport } from "../VideoImport";
 
 export const DataFalisitas = [
   {
@@ -18,7 +19,12 @@ export const DataFalisitas = [
       {
         id: 3,
         title: "Jayanti Plant",
-        image: ImageImport.Image1,
+        image: ImageImport.Image7,
+      },
+      {
+        id: 4,
+        title: "Jayanti Plant",
+        video: VideoImport.Video1,
       },
     ],
   },
@@ -27,29 +33,34 @@ export const DataFalisitas = [
     title: "Bitument Terminal",
     items: [
       {
-        id: 4,
-        title: "Bitument Terminal",
-        image: ImageImport.Image2,
-      },
-      {
         id: 5,
         title: "Bitument Terminal",
-        image: ImageImport.Image2,
+        image: ImageImport.Image8,
       },
       {
         id: 6,
         title: "Bitument Terminal",
-        image: ImageImport.Image3,
+        image: ImageImport.Image2,
       },
       {
         id: 7,
         title: "Bitument Terminal",
-        image: ImageImport.Image1,
+        image: ImageImport.Image7,
       },
       {
         id: 8,
         title: "Bitument Terminal",
-        image: ImageImport.Image1,
+        image: ImageImport.Image5,
+      },
+      {
+        id: 9,
+        title: "Bitument Terminal",
+        image: ImageImport.Image6,
+      },
+      {
+        id: 10,
+        title: "Jayanti Plant",
+        video: VideoImport.Video2,
       },
     ],
   },
@@ -58,14 +69,19 @@ export const DataFalisitas = [
     title: "Laboratorium",
     items: [
       {
-        id: 9,
-        title: "Laboratorium",
-        image: ImageImport.Image2,
-      },
-      {
-        id: 10,
+        id: 11,
         title: "Laboratorium",
         image: ImageImport.Image3,
+      },
+      {
+        id: 12,
+        title: "Laboratorium",
+        image: ImageImport.Image10,
+      },
+      {
+        id: 13,
+        title: "Jayanti Plant",
+        video: VideoImport.Video3,
       },
     ],
   },
@@ -74,9 +90,14 @@ export const DataFalisitas = [
     title: "Transportasi",
     items: [
       {
-        id: 11,
+        id: 14,
         title: "Transportasi",
-        image: ImageImport.Image3,
+        image: ImageImport.Image11,
+      },
+      {
+        id: 15,
+        title: "Jayanti Plant",
+        video: VideoImport.Video3,
       },
     ],
   },
@@ -85,9 +106,9 @@ export const DataFalisitas = [
     title: "Kantor Pusat",
     items: [
       {
-        id: 12,
+        id: 16,
         title: "Kantor Pusat",
-        image: ImageImport.Image2,
+        image: ImageImport.Image6,
       },
     ],
   },

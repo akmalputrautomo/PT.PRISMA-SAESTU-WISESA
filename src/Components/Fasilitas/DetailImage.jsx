@@ -31,13 +31,23 @@ export default function DetailImage({
           <SwiperSlide key={index}>
             <article className="w-full h-full justify-center flex">
               <figure className="w-10/12 h-full flex flex-col justify-center items-center py-10">
-                <img
-                  src={item.image}
-                  alt="iamge"
-                  width={500}
-                  height={500}
-                  className="w-full md:w-1/3 object-contain md:object-cover rounded-md"
-                />
+                {item.video ? (
+                  <video
+                    src={item.video}
+                    width={500}
+                    height={500}
+                    controls
+                    className="w-full md:w-1/3 object-contain md:object-cover rounded-md"
+                  />
+                ) : (
+                  <img
+                    src={item.image}
+                    alt="image"
+                    width={500}
+                    height={500}
+                    className="w-full md:w-1/3 object-contain md:object-cover rounded-md"
+                  />
+                )}
                 <figcaption className="w-full md:w-1/3 max-md:text-sm bg-slate-50 px-2 py-4">
                   {item.title}
                 </figcaption>
