@@ -4,10 +4,10 @@ import { HiCheck } from "react-icons/hi";
 import FrameBorder from "../../Components/Frame_border";
 
 export const VisiMisi = () => {
-  const misiList = ["Menjadi pilihan utama para pelanggan", "Mengembangkan profesionalisme karyawan", "Menjunjung tinggi nilai-nilai etika bisnis", "Mengedepankan safety dalam operasional", "Ramah lingkungan dalam produksi"];
+  const misiList = ["Memberikan pelayanan yang terbaik, jujur, profesional, dan berkualitas", "Menjunjung tinggi harkat, derajat, dan persaudaraan"];
 
   return (
-    <div className=" w-full mx-auto py-16 ">
+    <div className="w-full mx-auto pb-4">
       {/* Frame Border */}
       <FrameBorder title="Visi & Misi" link="VisiMisi" />
 
@@ -27,7 +27,7 @@ export const VisiMisi = () => {
         <div className="flex flex-col items-center">
           <FaBuilding className="text-4xl text-gray-700 mb-4" />
           <h4 className="text-2xl font-semibold text-gray-900">Visi</h4>
-          <p className="text-gray-700 text-center mt-2">Menjadi perusahaan penyedia solusi terbaik dalam mendukung pembangunan infrastruktur di Indonesia.</p>
+          <p className="text-gray-700 text-center mt-2">Memaksimalkan seluruh keterampilan, kemampuan, dan pengalaman demi tercapainya kualitas kerja yang terbaik serta mendukung terciptanya lingkungan kerja yang aman dan profesional.</p>
         </div>
 
         {/* Misi */}

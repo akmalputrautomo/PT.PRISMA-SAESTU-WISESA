@@ -15,6 +15,7 @@ import { Karir } from "@/pages/Karir/Karir";
 import { KarirDetail } from "@/pages/Karir/KarirDetail";
 import { Sekilas } from "@/pages/TentangKami/Sekilas";
 import { Halamantidaktersedia } from "@/pages/Halamantidaktersedia"; // Tambahkan ini
+import { Coba } from "@/Components/home/Coba";
 
 export const Routerlist = () => {
   return (
@@ -47,6 +48,7 @@ export const Routerlist = () => {
 
         {/* Halaman 404 */}
         <Route path="*" element={<Halamantidaktersedia />} />
+        {/* <Route path="/coba" element={<Coba />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>
