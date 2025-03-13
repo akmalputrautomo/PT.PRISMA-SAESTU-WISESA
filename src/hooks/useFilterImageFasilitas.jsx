@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { DataFalisitas } from "@/utils/data/Data_Fasilitas";
+import { DataFalisitas } from "../utils/Data/Data_Fasilitas";
 
 export function useFilterImageFasilitas() {
   const DataItems = useMemo(

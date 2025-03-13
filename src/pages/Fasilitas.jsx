@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import FrameBorder from "@/Components/Frame_border";
 import HeaderFasilitas from "@/Components/Fasilitas/Header";
-import { DataFalisitas } from "@/utils/data/Data_Fasilitas";
 import "swiper/css/navigation";
 
 import ListImage from "@/Components/Fasilitas/ListImage";
 import DetailImage from "@/Components/Fasilitas/DetailImage";
 import chunkArray from "@/utils/Transform_List_Image_Fasilitas";
 import { useFilterImageFasilitas } from "@/hooks/useFilterImageFasilitas";
+import { DataFalisitas } from "../utils/Data/Data_Fasilitas";
 
 export const Fasilitas = () => {
   const Data = DataFalisitas;
