@@ -43,8 +43,4 @@ export const ListNavbar = [
     name: "Karir",
     link: "/karir",
   },
-  // {
-  //   name: "News",
-  //   link: "/News",
-  // },
 ];
