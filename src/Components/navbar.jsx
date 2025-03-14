@@ -2,12 +2,60 @@ import { useState } from "react";
 import { ImageImport } from "@/utils/ImageImport";
 import { Link, useLocation } from "react-router";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { DataProduk } from "@/utils/Data/Data_Produk";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
-import { ListNavbar } from "@/utils/data_list_navbar";
-
+const ListNavbar = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Tentang Kami",
+    link: "/TentangKami/Sekilas",
+    list_link: [
+      {
+        name: "Sekilas Perusahaan",
+        link: "/TentangKami/Sekilas",
+      },
+      {
+        name: "Visi Misi",
+        link: "/TentangKami/VisiMisi",
+      },
+      {
+        name: "Board Of Director",
+        link: "/TentangKami/BoardOfDicertor",
+      },
+      {
+        name: "Mengapa Memilih Kami",
+        link: "/TentangKami/MengapaMemilihKami",
+      },
+    ],
+  },
+  {
+    name: "Produk",
+    link: "/produk",
+    list_link: DataProduk.map((item) => ({
+      name: item.title,
+      link: `/Produk${item.id ? `/${item.id}` : ""}`,
+    })),
+  },
+  {
+    name: "Fasilitas",
+    link: "/fasilitas",
+  },
+  {
+    name: "Karir",
+    link: "/karir",
+  },
+  {
+    name: "News",
+    link: "/News",
+  },
+];
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = useLocation().pathname;
+  const splitPathname = pathname.split("/")[1].toLowerCase();
 
   const [transparant, transparantSet] = useState(false);
   const { scrollY } = useScroll();
@@ -18,14 +66,11 @@ export default function Navbar() {
   // Toggle List Mobile
   const [openListNavbarMobile, setOpenListNavbarMobile] = useState({});
   const toggleMenu = (index) => {
-    console.log(index);
-
     setOpenListNavbarMobile((prev) => ({
       ...prev,
       [index]: !prev[index],
     }));
   };
-
   return (
     <motion.header
       animate={
