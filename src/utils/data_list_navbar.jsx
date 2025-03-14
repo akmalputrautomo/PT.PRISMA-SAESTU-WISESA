@@ -1,4 +1,4 @@
-import { DataProduk } from "./Data_Produk";
+import { DataProduk } from "./data/Data_Produk";
 
 export const ListNavbar = [
   {
