@@ -3,7 +3,7 @@ import { ImageImport } from "@/utils/ImageImport";
 import { Link, useLocation } from "react-router";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
-import { ListNavbar } from "../utils/data/Data_List_Navbar";
+import { ListNavbar } from "@/utils/data/Data_List_Navbar";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
