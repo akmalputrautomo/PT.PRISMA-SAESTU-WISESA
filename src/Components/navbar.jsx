@@ -2,60 +2,12 @@ import { useState } from "react";
 import { ImageImport } from "@/utils/ImageImport";
 import { Link, useLocation } from "react-router";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { DataProduk } from "@/utils/Data/Data_Produk";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
-const ListNavbar = [
-  {
-    name: "Home",
-    link: "/",
-  },
-  {
-    name: "Tentang Kami",
-    link: "/TentangKami/Sekilas",
-    list_link: [
-      {
-        name: "Sekilas Perusahaan",
-        link: "/TentangKami/Sekilas",
-      },
-      {
-        name: "Visi Misi",
-        link: "/TentangKami/VisiMisi",
-      },
-      {
-        name: "Board Of Director",
-        link: "/TentangKami/BoardOfDicertor",
-      },
-      {
-        name: "Mengapa Memilih Kami",
-        link: "/TentangKami/MengapaMemilihKami",
-      },
-    ],
-  },
-  {
-    name: "Produk",
-    link: "/produk",
-    list_link: DataProduk.map((item) => ({
-      name: item.title,
-      link: `/Produk${item.id ? `/${item.id}` : ""}`,
-    })),
-  },
-  {
-    name: "Fasilitas",
-    link: "/fasilitas",
-  },
-  {
-    name: "Karir",
-    link: "/karir",
-  },
-  {
-    name: "News",
-    link: "/News",
-  },
-];
+import { ListNavbar } from "@/utils/data/Data_List_Navbar";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = useLocation().pathname;
-  const splitPathname = pathname.split("/")[1].toLowerCase();
 
   const [transparant, transparantSet] = useState(false);
   const { scrollY } = useScroll();
@@ -113,7 +65,14 @@ export default function Navbar() {
                       <ChevronDown size={16} />
                     )}
                   </motion.div>
-                  <span className="w-full group-hover:h-1 block transition-all duration-300 group-hover:opacity-100  group-hover:translate-0 opacity-0 -translate-x-100 bg-orange-500  rounded-2xl "></span>
+                  <span
+                    className={`w-full group-hover:h-1 block transition-all duration-300 group-hover:opacity-100 group-hover:translate-0 ${
+                      (pathname === "/" && item.link === "/") ||
+                      (item.link !== "/" && pathname.includes(item.link))
+                        ? "opacity-100 translate-0 h-1"
+                        : "opacity-0 -translate-x-full h-0"
+                    } bg-orange-500 rounded-2xl `}
+                  ></span>
                 </Link>
                 {item.hasOwnProperty("list_link") && (
                   <ul className=" hidden group-hover:block  duration-300 transition-all  shadow-lg w-48 space-y-5 bg-white p-3 pb-0    absolute top-5 lg:top-6  text-black ">
@@ -127,7 +86,6 @@ export default function Navbar() {
                         </Link>
                       </li>
                     ))}
-                    <li></li>
                   </ul>
                 )}
               </li>
