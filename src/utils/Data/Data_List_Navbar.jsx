@@ -1,3 +1,5 @@
+import { DataProduk } from "./Data_Produk";
+
 export const ListNavbar = [
   {
     name: "Home",
