@@ -7,7 +7,7 @@ export const Sekilas = () => {
       <FrameBorder title="Profil Singkat Perusahaan" link="Sekilas" />
 
       {/* Sejarah Perusahaan */}
-      <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6 border border-gray-300 mt-8">
+      <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6 border border-gray-300 ">
         <h2 className="text-lg font-bold text-blue-900 border-b-2 border-blue-900 text-center pb-2 mb-4">SEJARAH PERUSAHAAN</h2>
 
         <p className="text-justify leading-relaxed text-md text-gray-700">
