@@ -31,7 +31,7 @@ export const VisiMisi = () => {
         </div>
 
         {/* Misi */}
-        <div className="flex flex-col items-start md:items-center">
+        <div className="flex flex-col items-center md:items-center">
           <FaBuilding className="text-4xl text-gray-700 mb-4" />
           <h4 className="text-2xl font-semibold text-gray-900">Misi</h4>
           <ul className="text-gray-700 mt-2 space-y-2">

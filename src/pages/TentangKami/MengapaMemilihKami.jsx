@@ -4,7 +4,7 @@ import FrameBorder from "../../Components/Frame_border";
 export const MengapaMemilihKami = () => {
   return (
     <div className="w-full mx-auto text-gray-800">
-      <FrameBorder title="Mengapa Memilih Kami" link="MengapaMemilihKami" />
+      <FrameBorder title="Profil Perusahaan" link="Profil" />
 
       <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6 border border-gray-300">
         <h2 className="text-lg font-bold text-blue-900 border-b-2 border-blue-900 text-center pb-2 mb-4">

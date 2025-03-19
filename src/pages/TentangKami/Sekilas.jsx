@@ -4,7 +4,7 @@ import FrameBorder from "../../Components/Frame_border";
 export const Sekilas = () => {
   return (
     <div className="w-full mx-auto text-gray-800 bg-gray-100 ">
-      <FrameBorder title="Profil Singkat Perusahaan" link="Sekilas" />
+      <FrameBorder title="Profil Singkat Perusahaan" link="SejarahPerusahaan" />
 
       {/* Sejarah Perusahaan */}
       <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6 border border-gray-300 ">

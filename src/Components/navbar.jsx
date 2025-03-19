@@ -11,11 +11,11 @@ const ListNavbar = [
   },
   {
     name: "Tentang Kami",
-    link: "/TentangKami/Sekilas",
+    link: "/TentangKami/SejarahPerusahaan",
     list_link: [
       {
-        name: "Sekilas Perusahaan",
-        link: "/TentangKami/Sekilas",
+        name: "SeJarah Perusahaan",
+        link: "/TentangKami/SejarahPerusahaan",
       },
       {
         name: "Visi Misi",
@@ -26,8 +26,8 @@ const ListNavbar = [
         link: "/TentangKami/BoardOfDicertor",
       },
       {
-        name: "Mengapa Memilih Kami",
-        link: "/TentangKami/MengapaMemilihKami",
+        name: "Profil Perusahaan",
+        link: "/TentangKami/Profil",
       },
     ],
   },

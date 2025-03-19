@@ -2,19 +2,19 @@ import React from "react";
 import FrameBorder from "../../Components/Frame_border";
 
 const directors = [
-  { name: "HADI BUNTARA", role: "Commissioner", image: "https://cdn.medcom.id/dynamic/content/2018/05/14/874136/tsQLu9A7aB.jpg?w=1024" },
-  { name: "SALDJU", role: "President Director", image: "https://cdn.medcom.id/dynamic/content/2018/05/14/874136/tsQLu9A7aB.jpg?w=1024" },
-  { name: "SIOK LIN", role: "Finance & Administration Director", image: "https://cdn.medcom.id/dynamic/content/2018/05/14/874136/tsQLu9A7aB.jpg?w=1024" },
-  { name: "PRIYO SETIAWAN", role: "Sales & Marketing Director", image: "https://cdn.medcom.id/dynamic/content/2018/05/14/874136/tsQLu9A7aB.jpg?w=1024" },
-  { name: "TITIS WIDJANARKO", role: "Operation General Manager", image: "https://cdn.medcom.id/dynamic/content/2018/05/14/874136/tsQLu9A7aB.jpg?w=1024" },
-  { name: "IVAN PRANAJAYA", role: "Finance & Accounting General Manager", image: "https://cdn.medcom.id/dynamic/content/2018/05/14/874136/tsQLu9A7aB.jpg?w=1024" },
+  { name: "HADI BUNTARA", role: "Commissioner", image: "" },
+  { name: "SALDJU", role: "President Director", image: "" },
+  { name: "SIOK LIN", role: "Finance & Administration Director", image: "" },
+  { name: "PRIYO SETIAWAN", role: "Sales & Marketing Director", image: "" },
+  { name: "TITIS WIDJANARKO", role: "Operation General Manager", image: "" },
+  { name: "IVAN PRANAJAYA", role: "Finance & Accounting General Manager", image: "" },
 ];
 
 export const BoardOfDicertor = () => {
   return (
     <div className="w-full mx-auto text-center">
       {/* Frame Border */}
-      <FrameBorder title="Visi & Misi" link="BoardOfDicertor" />
+      <FrameBorder title="Board Of Director" link="BoardOfDicertor" />
 
       {/* Judul */}
       <h2 className="text-3xl font-bold text-gray-900 flex pt-4 items-center justify-center gap-2 mb-12">
