@@ -1,37 +1,37 @@
 import React from "react";
-import { FaIndustry, FaTruck, FaLock, FaBalanceScale, FaMicrochip, FaCubes } from "react-icons/fa";
+import { FaIndustry, FaTruck, FaLock, FaBalanceScale, FaMicrochip, FaCubes, FaVideo, FaPrint, FaShieldAlt, FaTools, FaHeadset } from "react-icons/fa";
 
 export const Section2 = () => {
   const items = [
     {
-      icon: <FaIndustry size={40} />,
-      title: "EFISIEN",
-      description: "Fasilitas Pengisian Aspal ke dalam truk yang cepat dan efisien.",
-    },
-    {
-      icon: <FaTruck size={40} />,
-      title: "ARMADA",
-      description: "Jumlah armada yang banyak, dapat menjamin kelancaran suplai aspal.",
+      icon: <FaVideo size={40} />,
+      title: "CCTV & SECURITY SYSTEM",
+      description: "Menyediakan solusi keamanan lengkap dengan CCTV, Access Door, dan Gate Parkir berkualitas tinggi.",
     },
     {
       icon: <FaLock size={40} />,
-      title: "SEGEL",
-      description: "Menggunakan segel di setiap truk untuk menjamin kualitas dan kuantitas aspal.",
+      title: "ACCESS CONTROL",
+      description: "Sistem kontrol akses yang canggih untuk pengamanan gedung dan area terbatas.",
     },
     {
-      icon: <FaBalanceScale size={40} />,
-      title: "TERKALIBRASI",
-      description: "Fasilitas Timbangan Aspal yang selalu terkalibrasi akan menjamin kuantitasnya.",
+      icon: <FaPrint size={40} />,
+      title: "PERCETAKAN",
+      description: "Layanan percetakan profesional untuk kebutuhan perusahaan dan personal.",
     },
     {
-      icon: <FaMicrochip size={40} />,
-      title: "TEKNOLOGI",
-      description: "Teknologi saling terintegrasi memberikan layanan terbaik untuk customer.",
+      icon: <FaShieldAlt size={40} />,
+      title: "KEAMANAN TERINTEGRASI",
+      description: "Solusi keamanan terpadu untuk perusahaan dan properti pribadi.",
     },
     {
-      icon: <FaCubes size={40} />,
-      title: "PRODUK",
-      description: "Produk aspal berkualitas dan tahan terhadap cuaca sangat penting.",
+      icon: <FaTools size={40} />,
+      title: "PEMASANGAN & PERAWATAN",
+      description: "Layanan instalasi dan perawatan berkala untuk memastikan sistem berjalan optimal.",
+    },
+    {
+      icon: <FaHeadset size={40} />,
+      title: "SUPPORT 24/7",
+      description: "Layanan dukungan teknis profesional siap membantu kapan saja.",
     },
   ];
 

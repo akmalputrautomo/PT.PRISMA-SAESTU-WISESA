@@ -2,12 +2,12 @@ import React from "react";
 import FrameBorder from "../../Components/Frame_border";
 
 const directors = [
-  { name: "HADI BUNTARA", role: "Commissioner", image: "" },
-  { name: "SALDJU", role: "President Director", image: "" },
-  { name: "SIOK LIN", role: "Finance & Administration Director", image: "" },
-  { name: "PRIYO SETIAWAN", role: "Sales & Marketing Director", image: "" },
-  { name: "TITIS WIDJANARKO", role: "Operation General Manager", image: "" },
-  { name: "IVAN PRANAJAYA", role: "Finance & Accounting General Manager", image: "" },
+  { name: "JUANA", role: "Direktur Utama", image: "" },
+  { name: "DIPTA WISESA", role: "Direktur", image: "" },
+  { name: "ARIF NOVIANTO", role: "Komisaris & Manager Keuangan", image: "" },
+  { name: "WAHYU", role: "Direksi", image: "" },
+  { name: "SITI RISKIYA NUPUS", role: "Manager Personalia", image: "" },
+  { name: "TISNA PRASETIAWAN", role: "Admin", image: "" },
 ];
 
 export const BoardOfDicertor = () => {
