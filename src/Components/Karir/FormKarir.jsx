@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 
 import { uploadPdf } from "../../utils/UploadPdf";
 import { toast } from "react-toastify";
+import { getEnvVariable } from "../../utils/envs";
 export default function FormKarir({ title = "" }) {
   const {
     register,
@@ -26,10 +27,10 @@ export default function FormKarir({ title = "" }) {
         };
         emailjs
           .send(
-            import.meta.env.VITE_SERVICE_ID,
-            import.meta.env.VITE_TEMPLATE_ID,
+            getEnvVariable("IPA_ERVICE_DI"),
+            getEnvVariable("IPA_PLATE_DI"),
             emailData,
-            import.meta.env.VITE_PUBLIC_KEY
+            getEnvVariable("IPA_BLIC_YK")
           )
           .then(() => {
             reset();
